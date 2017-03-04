@@ -1,0 +1,7 @@
+gpu_mem_1024=256  
+hdmi_ignore_cec_init=1  
+disable_overscan=1
+start_x=1  
+disable_splash=1
+dtoverlay=iqaudio-dacplus-overlay,unmute_amp  
+dtparam=audio=off
