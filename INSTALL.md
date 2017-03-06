@@ -76,7 +76,7 @@ Soft shutdown and power led
 $ sudo chmod 755 /etc/systemd/system/softshutdown.service
 $ sudo systemctl daemon-reload
 $ sudo systemctl enable softshutdown.service
-$ sudo systemctl start test
+$ sudo systemctl start softshutdown
 ```
 - connect led with 1K resistor between GPIO's pin 13 and GND
 - connect button between GPIO's pin 11 and GND
