@@ -4,7 +4,7 @@ Config Files used in this repository and documentation
 - /etc/mpd.conf
 - /boot/config.txt
 - /home/osmc/Script/soft_shutdown.py
-- /etc/rc.local
+- /etc/systemd/system/softshutdown.service
 
 
 Install OSMC
