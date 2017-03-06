@@ -70,12 +70,12 @@ SUBSYSTEM=="gpio", KERNEL=="gpio*", ACTION=="add", PROGRAM="/bin/sh -c 'chown ro
 
 Soft shutdown and power led
 ===========================
-- copy file etc/systemd/system/softshudown.py to same location as the path
+- copy file etc/systemd/system/softshudown.service to same location as the path
 - create and start the service : 
 ```bash
-$ sudo chmod 755 /etc/systemd/system/softshutdown.py
+$ sudo chmod 755 /etc/systemd/system/softshutdown.service
 $ sudo systemctl daemon-reload
-$ sudo systemctl enable test.service
+$ sudo systemctl enable softshutdown.service
 $ sudo systemctl start test
 ```
 - connect led with 1K resistor between GPIO's pin 13 and GND
