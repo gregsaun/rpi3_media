@@ -70,9 +70,13 @@ SUBSYSTEM=="gpio", KERNEL=="gpio*", ACTION=="add", PROGRAM="/bin/sh -c 'chown ro
 
 Soft shutdown and power led
 ===========================
-add this line to /etc/rc.local just before exit command (might be better to move to rcX.d/ (check current run level with $ runlevel))
+- copy file etc/systemd/system/softshudown.py to same location as the path
+- create and start the service : 
 ```bash
-python /home/osmc/Script/soft_shutdown.py &
+$ sudo chmod 755 /etc/systemd/system/softshutdown.py
+$ sudo systemctl daemon-reload
+$ sudo systemctl enable test.service
+$ sudo systemctl start test
 ```
 - connect led with 1K resistor between GPIO's pin 13 and GND
 - connect button between GPIO's pin 11 and GND

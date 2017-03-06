@@ -1,0 +1,10 @@
+[Unit]
+Description = Soft shutdown with button and led on GPIO
+Documentation = https://github.com/gregsaun/rpi3_media
+
+[Service]
+Type = simple
+ExecStart = /usr/bin/python /home/osmc/Script/soft_shutdown.py
+
+[Install]
+WantedBy = multi-user.target
