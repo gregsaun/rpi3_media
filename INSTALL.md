@@ -12,10 +12,21 @@ Install OSMC
 Follow OSMC installation steps for Raspberry Pi 3 on [osmc](https://osmc.tv/) website
 
 
-Install basic tools
-===================
+Basic config and tools
+======================
+- check this entry in /etc/sudoers (use visudo as root)
+```
+# Allow members of group sudo to execute any command
+%sudo   ALL=(ALL:ALL) ALL
+```
+- then add user to sudo group and install basic tools
 ```bash
+$ sudo adduser osmc sudo
 $ sudo apt-get update && sudo apt-get -y install vim git
+```
+- Clone the git repo into /home/osmc
+```bash
+$ git clone https://github/gregsaun/rpi3_media
 ```
 
 MPD and IQaudIO DAC Plus Installation
