@@ -25,7 +25,7 @@ def shutdown(pin):
         sleep(0.1) 
  
     # Unmount share to avoid "stop job is running" when on wifi
-    os.system("sudo umount /mnt/zik_syno")
+    os.system("sudo umount /mnt/naze_zik")
 
     # Then shutdown the pi!
     os.system("sudo shutdown -h now")
