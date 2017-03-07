@@ -5,11 +5,21 @@ Config Files used in this repository and documentation
 - /boot/config.txt
 - /home/osmc/Script/soft_shutdown.py
 - /etc/systemd/system/softshutdown.service
+- /etc/modprobe.d/raspi-blacklist.conf
 
 
 Install OSMC
 ============
 Follow OSMC installation steps for Raspberry Pi 3 on [osmc](https://osmc.tv/) website
+
+
+Disconnect onboard wireless
+===========================
+The onboard wifi isn't very terrific, better to use usb external dongle.
+It is necessary to deactivate the onboard wifi to be able to use external dongle.
+- replace /etc/modprobe.d/raspi-blacklist.conf to the same path
+- reboot
+- configure wifi under osmc
 
 
 Basic config and tools
@@ -24,7 +34,7 @@ Basic config and tools
 $ sudo adduser osmc sudo
 $ sudo apt-get update && sudo apt-get -y install vim git
 ```
-- Clone the git repo into /home/osmc
+- clone the git repo into /home/osmc
 ```bash
 $ git clone https://github/gregsaun/rpi3_media
 ```
